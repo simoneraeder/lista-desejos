@@ -1,0 +1,60 @@
+.footer{
+    background: rgba(206, 154, 202, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(14, 12, 13, 0.8);
+    color: rgb(13, 20, 20);
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.githubLink{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(5, 16, 26);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+
+
+}
+
+.githubLink:hover{
+    color: rgb(112, 11, 116);
+    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(59, 130, 246, 0.02);
+    transform: translate(-1px);
+}
+
+.githubIcon{
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+.githubLink:hover .githubIcon {
+    transform: scale(1.2);
+}
