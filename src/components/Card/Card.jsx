@@ -8,7 +8,7 @@ export const Card = ({ name, description, image }) => {
       </div>
       <div className={styles.content}>
         <h3 className={styles.name}>{name}</h3>
-        <p className={styles.descripton}>{descripton}</p>
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   );
