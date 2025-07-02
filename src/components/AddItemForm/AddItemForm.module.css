@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: rgb(163, 95, 143);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.inputContainer > input{
+    padding: 8px;
+    border: 2px solid #b90b85;
+    border-radius: 8px;
+}
+
+.inputContainer > input:focus{
+    outline: none;
+    border-color: rgb(70, 214, 13);
+    box-shadow:  0 0 3px rgba(57, 177, 33, 0.1);
+}
+
+.button{
+    background-color: rgb(214, 51, 214);
+    color: #dfe6ee;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    place-self: flex-end;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttom:hover{
+    background-color: rgb(200, 214, 213);
+   transform: translateY(-1px);
+   box-shadow: 0 2px 4px rgba(246, 59, 199, 0.4);
+
+}
