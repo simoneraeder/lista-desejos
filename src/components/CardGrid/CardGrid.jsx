@@ -1,9 +1,10 @@
 import { Card } from "../Card/Card";
 import styles from "./CardGrid.module.css";
 
-export const CardGrid = () => {
+export const CardGrid = ({wishs}) => {
     return(
         <div className= {styles.grid}>
+          {wishs}
  <Card
       name="Shows"
           description="Ir em mais shows"
