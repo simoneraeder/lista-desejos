@@ -6,7 +6,6 @@ export const Footer = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <p className={styles.dir}>
-            {" "}
             2025, Meus Desejos - Todos os direitos reservados
           </p>
           <div className={styles.links}>
