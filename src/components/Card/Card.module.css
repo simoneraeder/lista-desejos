@@ -1,9 +1,10 @@
 .card{
-    background: white;
+    background: linear-gradient(50deg, #ecf0f1, #9317a6);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0,0,0,0.5);
     border: 1px solid rgba(226, 232, 240, 0.8);
+ 
     }
 
 .imgContainer{
@@ -25,11 +26,11 @@
     .name{
         font-size: 1.25rem;
         font-weight: 600;
-        color: rgba(206, 154, 202, 0.95);
+        color: rgba(202, 23, 187, 0.95);
     }
     .description{
         font-size: 0.87rem;
-        color: #64748b;
+        color: #60059c;
         line-height: 1.6;
         margin: 0;
         overflow: hidden;

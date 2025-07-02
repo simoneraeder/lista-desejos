@@ -1,8 +1,8 @@
 .footer{
-    background: rgba(206, 154, 202, 0.95);
+    background: url(https://tse3.mm.bing.net/th/id/OIP.CEXI4shf63Pyj7G9Z004JQHaH3?rs=1&pid=ImgDetMain&o=7&rm=3);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(14, 12, 13, 0.8);
-    color: rgb(13, 20, 20);
+    color: rgb(224, 13, 161);
     padding: 2rem 1rem;
     margin-top: 4rem;
 }
@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgb(5, 16, 26);
+    color: rgb(172, 21, 159);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;

@@ -2,11 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    background-color: rgb(163, 95, 143);
+    background: linear-gradient(50deg, #ecf0f1, #9317a6);
     padding: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    color: rgb(150, 13, 116);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .inputContainer{
@@ -23,13 +25,13 @@
 
 .inputContainer > input:focus{
     outline: none;
-    border-color: rgb(70, 214, 13);
-    box-shadow:  0 0 3px rgba(57, 177, 33, 0.1);
+    border-color: rgb(95, 16, 160);
+    box-shadow:  0 0 3px rgba(3, 2, 3, 0.1);
 }
 
 .button{
-    background-color: rgb(214, 51, 214);
-    color: #dfe6ee;
+    background-color: rgb(194, 27, 158);
+    color: #ece2f3;
     padding: 8px;
     border: none;
     border-radius: 8px;
@@ -40,9 +42,9 @@
     transition: all 0.2s ease;
 }
 
-.buttom:hover{
-    background-color: rgb(200, 214, 213);
-   transform: translateY(-1px);
-   box-shadow: 0 2px 4px rgba(246, 59, 199, 0.4);
+.button:hover{
+background-color: rgb(201, 130, 211);
+transform: translateY(-1px);
+box-shadow: 0 2px 4px rgba(25, 6, 27, 0.4);
 
 }
