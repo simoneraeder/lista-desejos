@@ -2,6 +2,7 @@ import { Card } from "../Card/Card";
 import styles from "./CardGrid.module.css";
 
 export const CardGrid = ({ wishs, handleDelete }) => {
+
   return (
     <div className={styles.grid}>
       {wishs.map((wish, index) => (
@@ -10,6 +11,7 @@ export const CardGrid = ({ wishs, handleDelete }) => {
           name={wish.name}
           description={wish.description}
           image={wish.urlImage}
+          date={wish.date}
           onDelete={()=> handleDelete(index)}
         />
       ))}

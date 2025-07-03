@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from "./App.module.css";
 import { CardGrid } from "./components/CardGrid/CardGrid";
 import { Footer } from "./components/Footer/Footer";
@@ -13,6 +13,7 @@ function App() {
     name: "",
     description: "",
     urlImage: "",
+    date:"",
   });
   
   const handleSubmit = (e) => {
@@ -23,13 +24,10 @@ function App() {
       name: "",
       description: "",
       urlImage: "",
+      date:"",
     });
   };
-
-  const handleDelete = (indexToDelete) => {
-    const updatedWishs = wishs.filter((_, index) => index !== indexToDelete);
-    setWishs(updatedWishs);
-  };
+ 
 
 useEffect (() => {
 const savedWishs = localStorage.getItem("userWishs");
@@ -52,7 +50,13 @@ localStorage.setItem("userWishs", JSON.stringify(wishs));
     }
   }, [wishs]);
 
-
+const handleDelete = useCallback(
+  (indexToDelete) => {
+    const updatedWishs = wishs.filter((_,index) => index !== indexToDelete);
+    setWishs(updatedWishs);
+  },
+  [wishs]
+);
 
   return (
     <div className={styles.app}>
