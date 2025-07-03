@@ -9,7 +9,7 @@ export const Card = ({ name, description, image, onDelete }) => {
       <div className={styles.content}>
         <h3 className={styles.name}>{name}</h3>
         <p className={styles.description}>{description}</p>
-        <button onClick={onDelete} >Deletar</button>
+        <button className={styles.button} onClick={onDelete} >Deletar</button>
       </div>
        </div>
   );
