@@ -26,6 +26,11 @@ function App() {
     });
   };
 
+  const handleDelete = (indexToDelete) => {
+    const updatedWishs = wishs.filter((_, index) => index !== indexToDelete);
+    setWishs(updatedWishs);
+  };
+
 useEffect (() => {
 const savedWishs = localStorage.getItem("userWishs");
 console.log(savedWishs);
@@ -47,6 +52,8 @@ localStorage.setItem("userWishs", JSON.stringify(wishs));
     }
   }, [wishs]);
 
+
+
   return (
     <div className={styles.app}>
       <Header />
@@ -56,7 +63,7 @@ localStorage.setItem("userWishs", JSON.stringify(wishs));
         form={form}
         setForm={setForm}
         />
-        <CardGrid wishs={wishs} />
+        <CardGrid wishs={wishs} handleDelete={handleDelete} />
       </main>
       <Footer />
     </div>

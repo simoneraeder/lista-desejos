@@ -1,7 +1,7 @@
 .footer{
     background: url(https://tse3.mm.bing.net/th/id/OIP.CEXI4shf63Pyj7G9Z004JQHaH3?rs=1&pid=ImgDetMain&o=7&rm=3);
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(14, 12, 13, 0.8);
+    border-top: 1px solid rgba(180, 17, 180, 0.8);
     color: rgb(224, 13, 161);
     padding: 2rem 1rem;
     margin-top: 4rem;
@@ -44,7 +44,7 @@
 
 .githubLink:hover{
     color: rgb(112, 11, 116);
-    background: rgba(59, 130, 246, 0.05);
+    background: rgba(240, 16, 210, 0.05);
     border-color: rgba(59, 130, 246, 0.02);
     transform: translate(-1px);
 }
