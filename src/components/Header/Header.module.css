@@ -1,24 +1,51 @@
-.header{
-    background: url(https://tse3.mm.bing.net/th/id/OIP.CEXI4shf63Pyj7G9Z004JQHaH3?rs=1&pid=ImgDetMain&o=7&rm=3);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(170, 17, 157, 0.8);
-    padding: 2rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.header {
+  background: url(https://tse3.mm.bing.net/th/id/OIP.CEXI4shf63Pyj7G9Z004JQHaH3?rs=1&pid=ImgDetMain&o=7&rm=3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(170, 17, 157, 0.8);
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.container{
-max-width: 1200px;
-margin: 0 auto;
-text-align: center;
+.button{
+  background-color: rgb(194, 27, 158);
+  color: #ece2f3;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  place-self: flex-end;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.title{
-font-size: 3.5rem;
-font-weight: 700;
-color: #c70b8e;
-margin: 0 0 1.5rem 0;
-letter-spacing: -0.025em;
-font-family: Georgia, 'Times New Roman', Times, serif;
+.button:hover{
+  background-color: rgb(201, 130, 211);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(25, 6, 27, 0.4);
+  
+  }
+
+.input{
+  width: 300px;
+  height: 35px;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #c70b8e;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.025em;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
