@@ -7,9 +7,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: rgb(150, 13, 116);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(101, 48, 117);
+  font-family: Franklin Gothic Medium;
 }
 
 .inputContainer {

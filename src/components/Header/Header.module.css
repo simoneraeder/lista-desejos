@@ -15,12 +15,12 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 6rem;
   font-weight: 700;
-  color: #c70b8e;
+  color: linear-gradient(50deg, #b61fc4, #420a4b);
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.025em;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 .searchGroup {
