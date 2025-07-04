@@ -1,50 +1,50 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    background: linear-gradient(50deg, #ecf0f1, #9317a6);
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    color: rgb(150, 13, 116);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background: linear-gradient(50deg, #ecf0f1, #9317a6);
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: rgb(150, 13, 116);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.inputContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.inputContainer > input{
-    padding: 8px;
-    border: 2px solid #b90b85;
-    border-radius: 8px;
+.inputContainer > input {
+  padding: 8px;
+  border: 2px solid #b90b85;
+  border-radius: 8px;
 }
 
-.inputContainer > input:focus{
-    outline: none;
-    border-color: rgb(95, 16, 160);
-    box-shadow:  0 0 3px rgba(3, 2, 3, 0.1);
+.inputContainer > input:focus {
+  outline: none;
+  border-color: rgb(95, 16, 160);
+  box-shadow: 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.button{
-    background-color: rgb(194, 27, 158);
-    color: #ece2f3;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    place-self: flex-end;
-    font-family: inherit;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.button {
+  background-color: rgb(194, 27, 158);
+  color: #ece2f3;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid rgba(170, 17, 157, 0.8);
+  place-self: flex-end;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.button:hover{
-background-color: rgb(201, 130, 211);
-transform: translateY(-1px);
-box-shadow: 0 2px 4px rgba(25, 6, 27, 0.4);
-
+.button:hover {
+  background-color: rgb(201, 130, 211);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(25, 6, 27, 0.4);
 }
