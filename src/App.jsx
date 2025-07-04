@@ -17,24 +17,24 @@ function App() {
   });
 
   const filteredWishs = useMemo(() => {
-      if(!search.trim()) {
-        return wishs;
-      }
-      return wishs.filter((wishs) => {
-        const seachLower = search.toLowerCase();
-        return (
-          wishs.name.toLowerCase().includes(seachLower) ||
-          wishs.description.toLowerCase().includes(seachLower)
-        )
-      })
-    }, [search, wishs]);
+    if (!search.trim()) {
+      return wishs;
+    }
+    return wishs.filter((wishs) => {
+      const seachLower = search.toLowerCase();
+      return (
+        wishs.name.toLowerCase().includes(seachLower) ||
+        wishs.description.toLowerCase().includes(seachLower)
+      );
+    });
+  }, [search, wishs]);
 
-    const onSearch = useCallback((searchValue) => {
-      setSearch(searchValue);
-    });
-    const onClear = useCallback(() => {
-      setSearch("");
-    });
+  const onSearch = useCallback((searchValue) => {
+    setSearch(searchValue);
+  });
+  const onClear = useCallback(() => {
+    setSearch("");
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,18 +77,20 @@ function App() {
     [wishs]
   );
 
-
-
   return (
     <div className={styles.app}>
-      <Header onSearch={onSearch} onClear={onClear}/>
+      <Header onSearch={onSearch} onClear={onClear} />
       <main className={styles.main}>
         <AddItemForm
           handleSubmit={handleSubmit}
           form={form}
           setForm={setForm}
         />
-        <CardGrid wishs={filteredWishs} handleDelete={handleDelete} />
+        <CardGrid
+          wishs={filteredWishs}
+          handleDelete={handleDelete}
+          search={search}
+        />
       </main>
       <Footer />
     </div>

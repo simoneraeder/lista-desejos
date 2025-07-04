@@ -1,0 +1,29 @@
+.container {
+  min-height: 42vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(101, 48, 117);
+  font-family: Franklin Gothic Medium;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 7rem;
+}
+
+.message {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(101, 48, 117);
+  font-family: Franklin Gothic Medium;
+}
