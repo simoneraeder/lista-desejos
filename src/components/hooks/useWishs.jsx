@@ -25,5 +25,5 @@ export const useWishs = () => {
         }
       }, [wishs]);
 
-      return {wishs, setWishs, loading};
+      return {wishs, setWishs, loading, setLoading};
 }
