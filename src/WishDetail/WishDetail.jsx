@@ -5,7 +5,6 @@ import { formatDate } from "../utils/formatDate";
 import { AddItemForm } from "../components/AddItemForm/AddItemForm";
 import styles from "./WishDetail.module.css";
 
-
 export const WishDetail = () => {
   const { id } = useParams();
   const { wishs, loading, setLoading, form, setForm, setWishs } = useWishs();
@@ -34,33 +33,52 @@ export const WishDetail = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    const updateWish = {...form, id: wishDetail.id}
-    setWishs((prev)=> prev.map((wish)=> (wish.id === updateWish.id ? updateWish : wish))
-  );
-  setIsEditing(false);
+    const updateWish = { ...form, id: wishDetail.id };
+    setWishs((prev) =>
+      prev.map((wish) => (wish.id === updateWish.id ? updateWish : wish))
+    );
+    setIsEditing(false);
   };
 
   if (loading) return <h1>Carregando...</h1>;
 
   return (
-    <div>
-      <button className={styles.button} onClick={() => navigate(-1)}>⬅️ Voltar</button>
-      <h1>Detalhes do desejo</h1>
-      <button className={styles.button} onClick={handleEditToggle}>✏️ Editar</button>
+    <div className={styles.container}>
+      <div className={styles.button}>
+        <button className={styles.btn} onClick={() => navigate(-1)}>
+          ⬅️ Voltar
+        </button>
+
+        <button className={styles.btn} onClick={handleEditToggle}>
+          {isEditing ? "❌ Cancelar" : " ✏️ Editar"}{" "}
+        </button>
+      </div>
       {isEditing ? (
         <>
-          <AddItemForm
-            handleSubmit={handleUpdate}
-            setForm={setForm}
-            form={form}
-          />
+          <div className={styles.content}>
+            <AddItemForm
+              handleSubmit={handleUpdate}
+              setForm={setForm}
+              form={form}
+            />
+          </div>
         </>
       ) : (
         <>
-          <p>{wishDetail.name}</p>
-          <p>{wishDetail.description}</p>
-          <p>{formatDate(wishDetail.date)}</p>
-          <img width={200} src={wishDetail.urlImage} alt={wishDetail.name} />
+          <div className={styles.content}>
+            <h1 className={styles.title}>Detalhes do desejo com o id: {id}</h1>
+            <div className={styles.imgContainer}>
+              <img
+                className={styles.img}
+                src={wishDetail.urlImage}
+                alt={wishDetail.name}
+              />
+            </div>
+            <p className={styles.name}>{wishDetail.name}</p>
+            <p className={styles.desc}>{wishDetail.description}</p>
+            <p>{formatDate(wishDetail.date)}</p>
+            <p className={styles.date}>{formatDate(wishDetail.date)}</p>
+          </div>
         </>
       )}
     </div>
