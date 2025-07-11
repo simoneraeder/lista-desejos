@@ -4,6 +4,10 @@ import { useWishs } from "../hooks/useWishs";
 import { formatDate } from "../utils/formatDate";
 import { AddItemForm } from "../components/AddItemForm/AddItemForm";
 import styles from "./WishDetail.module.css";
+import { PiNotePencilLight } from "react-icons/pi";
+import { ImCancelCircle } from "react-icons/im";
+import { IoBackspaceOutline } from "react-icons/io5";
+
 
 export const WishDetail = () => {
   const { id } = useParams();
@@ -33,39 +37,35 @@ export const WishDetail = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    const updateWish = { ...form, id: wishDetail.id };
-    setWishs((prev) =>
-      prev.map((wish) => (wish.id === updateWish.id ? updateWish : wish))
-    );
-    setIsEditing(false);
+    const updateWish = {...form, id: wishDetail.id}
+    setWishs((prev)=> prev.map((wish)=> (wish.id === updateWish.id ? updateWish : wish))
+  );
+  setIsEditing(false);
   };
 
   if (loading) return <h1>Carregando...</h1>;
 
   return (
     <div className={styles.container}>
-      <div className={styles.button}>
-        <button className={styles.btn} onClick={() => navigate(-1)}>
-          ⬅️ Voltar
-        </button>
-
-        <button className={styles.btn} onClick={handleEditToggle}>
-          {isEditing ? "❌ Cancelar" : " ✏️ Editar"}{" "}
-        </button>
-      </div>
+       <div className={styles.button}>
+      <button className={styles.btn} onClick={() => navigate(-1)}> <> <IoBackspaceOutline /> Voltar </></button>
+   
+      <button className={styles.btn} onClick={handleEditToggle}>
+        {isEditing ? <> <ImCancelCircle /> Cancelar </> : <> <PiNotePencilLight /> Editar </>} </button>
+        </div>
       {isEditing ? (
         <>
-          <div className={styles.content}>
-            <AddItemForm
-              handleSubmit={handleUpdate}
-              setForm={setForm}
-              form={form}
-            />
+              <div className={styles.content}>
+          <AddItemForm
+            handleSubmit={handleUpdate}
+            setForm={setForm}
+            form={form}
+          />
           </div>
         </>
       ) : (
         <>
-          <div className={styles.content}>
+        <div className={styles.content}>
             <h1 className={styles.title}>Detalhes do desejo com o id: {id}</h1>
             <div className={styles.imgContainer}>
               <img
@@ -73,14 +73,15 @@ export const WishDetail = () => {
                 src={wishDetail.urlImage}
                 alt={wishDetail.name}
               />
-            </div>
-            <p className={styles.name}>{wishDetail.name}</p>
-            <p className={styles.desc}>{wishDetail.description}</p>
-            <p>{formatDate(wishDetail.date)}</p>
-            <p className={styles.date}>{formatDate(wishDetail.date)}</p>
+                   </div>
+          <p className={styles.name}>{wishDetail.name}</p>
+          <p  className={styles.desc} >{wishDetail.description}</p>
+          <p>{formatDate(wishDetail.date)}</p>
+          <p className={styles.date}>{formatDate(wishDetail.date)}</p>
           </div>
         </>
       )}
     </div>
+    
   );
 };
