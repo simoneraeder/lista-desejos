@@ -4,18 +4,12 @@ import { CardGrid } from "./components/CardGrid/CardGrid";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { AddItemForm } from "./components/AddItemForm/AddItemForm";
-import { useWishs } from "./components/hooks/useWishs";
+import { useWishs } from "./hooks/useWishs";
 
-const DEFAULT_FORM = {
-  name: "",
-  description: "",
-  urlImage: "",
-  date: "",
-};
+
 
 function App({ search }) {
-  const {wishs, setWishs}   = useWishs();
-  const [form, setForm] = useState(DEFAULT_FORM);
+  const {wishs, setWishs, form, setForm}   = useWishs();
 
   const filteredWishs = useMemo(() => {
     if (!search.trim()) {
