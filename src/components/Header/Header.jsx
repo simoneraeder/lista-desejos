@@ -21,7 +21,9 @@ export const Header = ({ onSearch, onClear }) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
+
         <h1 className={styles.title}>Meus desejos</h1>
+        
         <form className={styles.searchForm} onSubmit={handleSubmit}>
           <div className={styles.searchGroup}>
             <input

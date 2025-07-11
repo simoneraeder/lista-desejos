@@ -9,6 +9,7 @@ import { ImCancelCircle } from "react-icons/im";
 import { IoBackspaceOutline } from "react-icons/io5";
 
 
+
 export const WishDetail = () => {
   const { id } = useParams();
   const { wishs, loading, setLoading, form, setForm, setWishs } = useWishs();

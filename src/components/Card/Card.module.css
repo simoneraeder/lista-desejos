@@ -49,12 +49,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: rgb(194, 51, 170);
-  font-family: Franklin Gothic Medium;
+  font-family: "Roboto Mono", monospace;
 }
 .description {
   font-size: 0.87rem;
   color: rgb(101, 48, 117);
-  font-family: Franklin Gothic Medium;
+  font-family: "Roboto Mono", monospace;
   line-height: 1.6;
   margin: 0;
   overflow: hidden;
