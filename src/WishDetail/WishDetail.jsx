@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useWishs } from "../hooks/useWishs";
 import { formatDate } from "../utils/formatDate";
 import { AddItemForm } from "../components/AddItemForm/AddItemForm";
+import styles from "./WishDetail.module.css";
+
 
 export const WishDetail = () => {
   const { id } = useParams();
@@ -42,9 +44,9 @@ export const WishDetail = () => {
 
   return (
     <div>
-      <button onClick={() => navigate(-1)}>⬅️ Voltar</button>
+      <button className={styles.button} onClick={() => navigate(-1)}>⬅️ Voltar</button>
       <h1>Detalhes do desejo</h1>
-      <button onClick={handleEditToggle}>✏️ Editar</button>
+      <button className={styles.button} onClick={handleEditToggle}>✏️ Editar</button>
       {isEditing ? (
         <>
           <AddItemForm
