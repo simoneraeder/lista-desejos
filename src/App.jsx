@@ -4,7 +4,7 @@ import { CardGrid } from "./components/CardGrid/CardGrid";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { AddItemForm } from "./components/AddItemForm/AddItemForm";
-import { useWishs } from "./hooks/useWishs";
+import { useWishs, DEFAULT_FORM } from "./hooks/useWishs";
 
 
 
