@@ -1,12 +1,33 @@
-# React + Vite
+# 📃 Lista de Desejos - Projeto com React e Rotas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte do meu aprendizado em React, com foco em **React Router**. Ele simula uma aplicação simples onde o usuário pode visualizar uma lista de desejos e acessar os detalhes de cada item.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React Router
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## 📚 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Página inicial com lista de desejos
+- Navegação entre páginas usando React Router (`react-router`)
+- Páginas de detalhes com parâmetros dinâmicos na URL (`useParams`)
+- Navegação programática (`useNavigate`)
+- Componente de layout reutilizável (Header/Footer)
+
+## 🛠️ Como Executar Localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/simoneraeder/lista-desejos.git
+
+# Acesse a pasta
+cd lista-desejos
+
+# Instale as dependências
+npm install
+
+# Inicie o projeto
+npm run dev
